@@ -62,10 +62,14 @@ class Editor extends Component {
   };
   onDownload = () => {
     // qrcode.innerHTML = "请粘贴战片";
-    html2pdf({
+    const toolbar = document.querySelector(".editor-toolbar");
+    toolbar.style.visibility = "hidden";
+    window.print();
+    toolbar.style.visibility = "visible";
+    /*html2pdf({
       element: document.querySelector("container"),
       name: "resume"
-    });
+    });*/
   };
 
   render() {
